@@ -6,10 +6,17 @@ const WHITELISTED_ELEMENTS = [
     'select',
     'datalist'
 ];
+const HIDE_DATA = true;
 const getFields = elements => elements.filter(element => WHITELISTED_ELEMENTS.includes(element.nodeName.toLowerCase()));
 const getFormData = (elements = []) => getFields(elements).map(field => {
     const {type, name, value} = field;
-    return {type, name, value};
+    const data = {type, name, value};
+
+    if (HIDE_DATA) {
+        data.value = ''.padStart(data.value.length, '*');
+    }
+
+    return data;
 });
 
 export default class FormRecorder extends BaseRecorder {
@@ -39,6 +46,10 @@ export default class FormRecorder extends BaseRecorder {
         const action = 'input';
         const {type, name, value} = event.target;
         const data = {type, name, value};
+
+        if (HIDE_DATA) {
+            data.value = ''.padStart(data.value.length, '*');
+        }
 
         this.updateData({timestamp, action, data});
     };
