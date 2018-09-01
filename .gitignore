@@ -2,5 +2,6 @@
 /public/css/
 /public/js/
 /node_modules/
+/server/
 *.log
 .DS_Store

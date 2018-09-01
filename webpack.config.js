@@ -3,12 +3,14 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env, argv) => ({
-    entry: [
-        path.resolve(__dirname, 'src', 'sass', 'app.scss'),
-        path.resolve(__dirname, 'src', 'js', 'app.js'),
-    ],
+    entry: {
+        'app.css': path.resolve(__dirname, 'src', 'sass', 'app.scss'),
+        'admin.css': path.resolve(__dirname, 'src', 'sass', 'admin.scss'),
+        'app.js': path.resolve(__dirname, 'src', 'js', 'app.js'),
+        'admin.js': path.resolve(__dirname, 'src', 'js', 'admin.js')
+    },
     output: {
-        filename: path.join('js', 'app.js'),
+        filename: path.join('js', '[name]'),
         path: path.resolve(__dirname, 'public')
     },
     module: {
