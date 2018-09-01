@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-1"
+  ],
+  "ignore": [
+    "node_modules"
+  ],
+  "plugins": [
+    "transform-async-to-generator",
+    "transform-class-properties",
+    "transform-decorators-legacy"
+  ]
+}

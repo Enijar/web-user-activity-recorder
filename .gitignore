@@ -1,0 +1,6 @@
+/.idea/
+/public/css/
+/public/js/
+/node_modules/
+*.log
+.DS_Store
