@@ -37,8 +37,8 @@ and stops.
 
 ### TODO
 
-[x] Implement click, form, link, resize and scroll recorders
-[ ] GUI to show useful data of a recorded session
-[ ] GUI to show replay of a recorded session
-[ ] Sync localStorage data to server then delete localStorage
-[ ] Write tests for each recorder
+- [x] Implement click, form, link, resize and scroll recorders
+- [ ] GUI to show useful data of a recorded session
+- [ ] GUI to show replay of a recorded session
+- [ ] Sync localStorage data to server then delete localStorage
+- [ ] Write tests for each recorder
