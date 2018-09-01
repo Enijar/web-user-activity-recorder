@@ -4,10 +4,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env, argv) => ({
     entry: {
-        'app.css': path.resolve(__dirname, 'src', 'sass', 'app.scss'),
-        'admin.css': path.resolve(__dirname, 'src', 'sass', 'admin.scss'),
-        'app.js': path.resolve(__dirname, 'src', 'js', 'app.js'),
-        'admin.js': path.resolve(__dirname, 'src', 'js', 'admin.js')
+        'app.css': path.resolve(__dirname, 'src', 'assets', 'sass', 'app.scss'),
+        'admin.css': path.resolve(__dirname, 'src', 'assets', 'sass', 'admin.scss'),
+        'app.js': path.resolve(__dirname, 'src', 'assets', 'js', 'app.js'),
+        'admin.js': path.resolve(__dirname, 'src', 'assets', 'js', 'admin.js')
     },
     output: {
         filename: path.join('js', '[name]'),
