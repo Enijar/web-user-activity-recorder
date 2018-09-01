@@ -1,5 +1,7 @@
 # Web User Activity Recorder
 
+Record user activity on a web page; such as clicking, scrolling, forms and linking.
+
 This is a task for the [OpenGift Hackathon](https://opengift.io/hackathon/). 
 
 The task is to record user activity on a website and send that report to a programmer or manager for useful insights.
