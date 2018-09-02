@@ -23,14 +23,20 @@ npm run assets:build
 Start a server with:
 
 ```bash
-cd public/ && python -m SimpleHTTPServer 8000
+cd server/public && php -S localhost:9000
 ```
+
+Serve test website with:
+
+```bash
+cd test && php -S localhost:8000
+``
 
 ### Approach
 
-All recorders have their own class inside the [src/js/Recorder/Recorders](src/js/Recorder/Recorders) directory. 
+All recorders have their own class inside the [src/js/Recorder/Recorders](src/Recorder/Recorders) directory. 
 
-The [Recorder](src/js/Recorder/index.js) class initialises all recorders and controls when the recorder starts 
+The [Recorder](src/Recorder.js) class initialises all recorders and controls when the recorder starts 
 and stops.
 
 [app.js](src/js/app.js) is where the recorder is started.
