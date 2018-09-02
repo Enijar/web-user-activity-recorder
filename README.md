@@ -34,7 +34,7 @@ cd test && php -S localhost:8000
 
 ### Approach
 
-All recorders have their own class inside the [src/js/Recorder/Recorders](src/Recorder/Recorders) directory. 
+All recorders have their own class inside the [src/Recorders](src/Recorders) directory. 
 
 The [Recorder](src/Recorder.js) class initialises all recorders and controls when the recorder starts 
 and stops.
