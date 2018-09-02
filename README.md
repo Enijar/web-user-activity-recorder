@@ -39,7 +39,7 @@ All recorders have their own class inside the [src/Recorders](src/Recorders) dir
 The [Recorder](src/Recorder.js) class initialises all recorders and controls when the recorder starts 
 and stops.
 
-[app.js](src/js/app.js) is where the recorder is started.
+[index.js](src/index.js) is where the recorder is started.
 
 ### TODO
 
