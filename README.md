@@ -30,7 +30,7 @@ Serve test website with:
 
 ```bash
 cd test && php -S localhost:8000
-``
+```
 
 ### Approach
 
