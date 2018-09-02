@@ -18,7 +18,7 @@ export default class ResizeRecorder extends BaseRecorder {
         const timestamp = Date.now() - this.startTime;
         const width = window.innerWidth;
         const height = window.innerHeight;
-        this.updateData({timestamp, width, height});
+        this.updateSession({timestamp, width, height});
     }
 
     handleResize = () => this.record();

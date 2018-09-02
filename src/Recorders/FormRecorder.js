@@ -1,11 +1,6 @@
 import BaseRecorder from "./BaseRecorder";
+import {WHITELISTED_ELEMENTS} from "../consts";
 
-const WHITELISTED_ELEMENTS = [
-    'input',
-    'textarea',
-    'select',
-    'datalist'
-];
 const HIDE_DATA = true;
 const getFields = elements => elements.filter(element => WHITELISTED_ELEMENTS.includes(element.nodeName.toLowerCase()));
 const getFormData = (elements = []) => getFields(elements).map(field => {
@@ -51,7 +46,7 @@ export default class FormRecorder extends BaseRecorder {
             data.value = ''.padStart(data.value.length, '*');
         }
 
-        this.updateData({timestamp, action, data});
+        this.updateSession({timestamp, action, data});
     };
 
     handleSubmit = event => {
@@ -59,6 +54,6 @@ export default class FormRecorder extends BaseRecorder {
         const action = 'submit';
         const data = getFormData([...event.target.elements]);
 
-        this.updateData({timestamp, action, data});
+        this.updateSession({timestamp, action, data});
     };
 }

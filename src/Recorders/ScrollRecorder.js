@@ -20,7 +20,7 @@ export default class ScrollRecorder extends BaseRecorder {
         const x = (window.pageXOffset || documentElement.scrollLeft) - (documentElement.clientLeft || 0);
         const y = (window.pageYOffset || documentElement.scrollTop) - (documentElement.clientTop || 0);
 
-        this.updateData({timestamp, x, y});
+        this.updateSession({timestamp, x, y});
     }
 
     handleScroll = () => this.record();

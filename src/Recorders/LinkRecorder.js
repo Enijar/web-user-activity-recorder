@@ -19,7 +19,7 @@ export default class LinkRecorder extends BaseRecorder {
         const timestamp = Date.now() - this.startTime;
         const {href} = event.target;
 
-        this.updateData({timestamp, href});
+        this.updateSession({timestamp, href});
     }
 
     handleClick = event => this.record(event);

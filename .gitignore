@@ -1,7 +1,6 @@
 /.idea/
-/public/css/
-/public/js/
 /node_modules/
-/server/
+/server/vendor/
+/server/public/build/
 *.log
 .DS_Store

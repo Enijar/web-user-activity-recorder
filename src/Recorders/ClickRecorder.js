@@ -17,7 +17,7 @@ export default class ClickRecorder extends BaseRecorder {
         const timestamp = Date.now() - this.startTime;
         const element = event.target.nodeName.toLowerCase();
 
-        this.updateData({timestamp, element});
+        this.updateSession({timestamp, element});
     }
 
     handleClick = event => this.record(event);
